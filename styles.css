@@ -1,0 +1,305 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+    margin-left: 220px;
+    
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #333;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+
+
+.infos-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.infos-list div {
+    width: 23%;
+    margin-bottom: 20px;
+    padding: 10px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(37, 68, 43, 0.1);
+}
+
+.infos-list ul {
+    list-style-type: none;
+}
+
+.cv-buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px; /* Espacement entre les boutons */
+}
+
+.cv-buttons .btn {
+    background-color: #2c3e50;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s;
+    border: none;
+}
+
+.cv-buttons .btn:hover {
+    background-color: #58787a;
+}
+
+.cv-buttons .btn:active {
+    background-color: #1abc9c; /* Changement de couleur au clic */
+}
+
+.timeline {
+    position: relative;
+    margin: 40px 0;
+    padding-left: 20px;
+    border-left: 4px solid #3498db;
+}
+
+.timeline-item {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -33px;
+    top: 5px;
+    width: 18px;
+    height: 18px;
+    background-color: #3498db;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 0 0 2px #3498db;
+}
+
+.timeline-date {
+    font-weight: bold;
+    color: #3498db;
+    margin-bottom: 5px;
+}
+
+.timeline-content {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Conteneur général en deux colonnes */
+.parcours-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap; /* pour que ça passe sur petit écran */
+    margin-top: 40px;
+  }
+  
+  /* Colonne individuelle */
+  .school, .stage {
+    flex: 1;
+    min-width: 300px; /* taille minimale pour éviter de tout casser */
+  }
+
+  
+  
+  /* Styling optionnel pour les timelines */
+  .timeline {
+    margin-top: 20px;
+  }
+  
+  .timeline-item {
+    margin-bottom: 20px;
+  }
+  
+  /* Responsive : empile les colonnes en dessous de 768px */
+  @media (max-width: 768px) {
+    .parcours-grid {
+      flex-direction: column;
+    }
+  }
+  
+
+  .tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+
+  .tab {
+    background-color: #f1f1f1;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .tab:hover, .tab.active {
+    background-color: #2c3e50;
+    color: white;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .gallery img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
+  }
+
+  .gallery img:hover {
+    transform: scale(1.03);
+  }
+
+  /* Optionnel : cacher les éléments filtrés avec animation */
+  .hidden {
+    display: none;
+  }
+
+.project, .experience {
+    margin-bottom: 20px;
+    padding: 10px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.project h3, .experience h3 {
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: #fff;
+    margin-top: 20px;
+    margin-left: 200px
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#menu-toggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1001;
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 4px;
+}
+
+.sidebar {
+    width: 200px;
+    height: 100vh;
+    background-color: #2c3e50;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 60px;
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+
+.hidden {
+    transform: translateX(-100%);
+}
+
+.visible {
+    transform: translateX(0);
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.sidebar ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    padding: 10px;
+    transition: background 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #34495e;
+    border-radius: 4px;
+}
