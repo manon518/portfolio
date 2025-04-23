@@ -223,6 +223,35 @@ h2 {
     margin-bottom: 10px;
 }
 
+.slider {
+    width: 80%;
+    max-width: 600px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    margin: auto;
+  }
+
+  .slides {
+    display: flex;
+    width: 400%; /* 4 images */
+    animation: slide 12s infinite;
+  }
+
+  .slides img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+
+  @keyframes slide {
+    0%   { transform: translateX(0%); }
+    25%  { transform: translateX(-100%); }
+    50%  { transform: translateX(-200%); }
+    75%  { transform: translateX(-300%); }
+    100% { transform: translateX(0%); }
+  }
+
 footer {
     text-align: center;
     padding: 20px;
