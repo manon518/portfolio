@@ -246,12 +246,43 @@
     <section id="langages" class="container">
         <h3>- Langages Pratiqués</h3>
         <p>Les différents langages que j'ai pu rencontrer et pratiquer lors de ma formation.</p>
-        <div class="slides">
-            <img src="https://via.placeholder.com/600x300?text=Diapo+1" alt="Diapo 1">
-            <img src="https://via.placeholder.com/600x300?text=Diapo+2" alt="Diapo 2">
-            <img src="https://via.placeholder.com/600x300?text=Diapo+3" alt="Diapo 3">
-            <img src="https://via.placeholder.com/600x300?text=Diapo+4" alt="Diapo 4">
-        </div>
+        <div class="carousel">
+            <div class="carousel-track" id="track">
+              <div class="carousel-slide">
+                <div class="competence">
+                  <img src="https://via.placeholder.com/60?text=Java" alt="Java">
+                  <p><strong>Java</strong><br>Langage de programmation.</p>
+                </div>
+                <div class="competence">
+                  <img src="https://via.placeholder.com/60?text=PHP" alt="PHP">
+                  <p><strong>PHP</strong><br>Langage web serveur.</p>
+                </div>
+                <div class="competence">
+                  <img src="https://via.placeholder.com/60?text=SQL" alt="SQL">
+                  <p><strong>SQL</strong><br>Langage de base de données.</p>
+                </div>
+              </div>
+              <div class="carousel-slide">
+                <div class="competence">
+                  <img src="https://via.placeholder.com/60?text=HTML" alt="HTML">
+                  <p><strong>HTML</strong><br>Structure de pages web.</p>
+                </div>
+                <div class="competence">
+                  <img src="https://via.placeholder.com/60?text=CSS" alt="CSS">
+                  <p><strong>CSS</strong><br>Style des pages web.</p>
+                </div>
+                <div class="competence">
+                  <img src="https://via.placeholder.com/60?text=JS" alt="JavaScript">
+                  <p><strong>JS</strong><br>Langage interactif web.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="dots">
+            <span class="dot active" onclick="moveSlide(0)"></span>
+            <span class="dot" onclick="moveSlide(1)"></span>
+          </div>
 
     </section>
 
@@ -339,6 +370,16 @@
         filterCertificates(filter);
       });
     });
+
+    const track = document.getElementById('track');
+    const dots = document.querySelectorAll('.dot');
+
+    function moveSlide(index) {
+        track.style.transform = `translateX(-${index * 100}%)`;
+        dots.forEach(dot => dot.classList.remove('active'));
+        dots[index].classList.add('active');
+    }
+
     </script>
     
 </body>
