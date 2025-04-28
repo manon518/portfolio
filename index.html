@@ -9,18 +9,28 @@
 </head>
 <body>
     <button id="menu-toggle">☰ Menu</button>
-    <nav id= "sidebar" class="sidebar hidden">
+    <nav id="sidebar" class="sidebar hidden">
         <ul>
             <li><a href="">Accueil</a></li>
             <li><a href="#about">Profil</a></li>
             <li><a href="#school">Parcours</a></li>
             <li><a href="#stage">Stages</a></li>
             <li><a href="#skills">Compétences</a></li>
-            <li><a href="">Projets</a></li>
-            <li><a href="">Épreuves</a></li>
-            <li><a href="">Contact</a></li>
+            <li><a href="#projects">Projets</a></li>
+    
+            <!-- Épreuves avec sous-menu -->
+            <li class="has-submenu">
+                <a href="#" id="epreuves-link">Épreuves</a>
+                <ul class="submenu">
+                    <li><a href="#epreuve1">Épreuve E5</a></li>
+                    <li><a href="#epreuve2">Épreuve E6</a></li>
+                </ul>
+            </li>
+    
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
+    
     
     <header>
         <div class="container">
@@ -299,15 +309,21 @@
     <section id="projects" class="container">
         <h2>Mes Projets</h2>
         <div class="project">
+            <h3>Projet Perso : E-boutique</h3>
+            <p>Description : Lors de la MC SNO, j'ai pu réalisé une petite e-boutique pour la vente de bijoux</p>
+            <p>Technologies utilisées : webnode</p>
+            <a href="https://toujours09.webnode.fr/">Lien vers le projet</a>
+        </div>
+        <div class="project">
             <h3>Projet Perso : Application qualité de l'air</h3>
-            <p>Description : une mini application afin de voir quelle est la qualité de l'air selon notre localisation</p>
+            <p>Description : Une mini application afin de voir quelle est la qualité de l'air selon notre localisation</p>
             <p>Technologies utilisées : HTML, CSS, JavaScript</p>
-            <a href="https://manon518.github.io/app-air-quality-avec-api/">Lien vers le projet</a>
+            <a href="https://air-quality-app-manon.vercel.app/">Lien vers le projet</a>
         </div>
         <div class="project">
             <h3>Projet Engagement étudiant : Bénévolat</h3>
-            <p>Description : L'association La Pangee souhaite afficher une carte et le choix de l'endroit à l'aide d'un mini questionnaire pour afficher les spéculations de chque village (statistiques)</p>
-            <p>Technologies utilisées : Node.js, html, css, javascript et mangodb</p>
+            <p>Description : L'association La Pangee souhaite afficher une carte et le choix de l'endroit à l'aide d'un mini questionnaire pour afficher les spéculations de chaque village (statistiques)</p>
+            <p>Technologies utilisées : React, html, css, javascript</p>
             <a href="#">Lien vers le projet</a>
         </div>
     </section>
@@ -348,8 +364,19 @@
             sidebar.classList.toggle('visible');
         });
 
+        document.addEventListener('DOMContentLoaded', function() {
+        const epreuvesLink = document.getElementById('epreuves-link');
+        const parentLi = epreuvesLink.parentElement;
+
+        epreuvesLink.addEventListener('click', function(event) {
+            event.preventDefault(); // Empêche de recharger la page
+            parentLi.classList.toggle('open'); // Ajoute ou enlève la classe "open"
+            });
+        });
+
         const tabs = document.querySelectorAll('.tab');
-    const images = document.querySelectorAll('.gallery img');
+        const images = document.querySelectorAll('.gallery img');
+
 
     // Fonction de filtrage selon la catégorie sélectionnée
     function filterCertificates(filter) {
