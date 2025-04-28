@@ -136,80 +136,80 @@ h2 {
     gap: 40px;
     flex-wrap: wrap; /* pour que ça passe sur petit écran */
     margin-top: 40px;
-  }
+}
   
   /* Colonne individuelle */
-  .school, .stage {
+.school, .stage {
     flex: 1;
     min-width: 300px; /* taille minimale pour éviter de tout casser */
-  }
+}
 
   
   
   /* Styling optionnel pour les timelines */
-  .timeline {
+.timeline {
     margin-top: 20px;
-  }
+}
   
-  .timeline-item {
+.timeline-item {
     margin-bottom: 20px;
-  }
+}
   
   /* Responsive : empile les colonnes en dessous de 768px */
   @media (max-width: 768px) {
     .parcours-grid {
       flex-direction: column;
     }
-  }
+}
   
 
-  .tabs {
+.tabs {
     display: flex;
     justify-content: center;
     gap: 10px;
     flex-wrap: wrap;
     margin-bottom: 20px;
-  }
+}
 
-  .tab {
+.tab {
     background-color: #f1f1f1;
     padding: 10px 20px;
     border-radius: 20px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  }
+}
 
-  .tab:hover, .tab.active {
+.tab:hover, .tab.active {
     background-color: #2c3e50;
     color: white;
-  }
+}
 
-  .gallery {
+.gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
-  }
+}
 
-  .gallery img {
+.gallery img {
     width: 100%;
     max-height: 500px;
     object-fit: contain;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.5);
     transition: transform 0.3s ease;
-  }
+}
 
-  .gallery img:hover {
+.gallery img:hover {
     transform: scale(1.03);
-  }
+}
 
   /* Optionnel : cacher les éléments filtrés avec animation */
-  .hidden {
+.hidden {
     display: none;
-  }
+}
 
 .project, .experience {
     margin-bottom: 20px;
@@ -228,15 +228,15 @@ h2 {
     overflow: hidden;
     width: 100%;
     
-  }
+}
 
-  .carousel-track {
+.carousel-track {
     display: flex;
     transition: transform 0.5s ease-in-out;
     width: auto;
-  }
+}
 
-  .carousel-slide {
+.carousel-slide {
     min-width: 100%;
     display: flex;
     justify-content: space-between;
@@ -244,7 +244,7 @@ h2 {
     padding: 2rem;
   }
 
-  .competence {
+.competence {
     width: 30%;
     padding: 1.5rem;
     background: white;
@@ -252,23 +252,23 @@ h2 {
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     text-align: center;
     transition: transform 0.3s;
-  }
+}
 
-  .competence:hover{
+.competence:hover{
     transform: translateY(-5px);
-  }
+}
 
-  .competence img {
+.competence img {
     width: 60px;
     height: 60px;
-  }
+}
 
-  .dots {
+.dots {
     margin-top: 20px;
     text-align: center;
-  }
+}
 
-  .dot {
+.dot {
     height: 12px;
     width: 12px;
     margin: 0 5px;
@@ -276,11 +276,42 @@ h2 {
     border-radius: 50%;
     display: inline-block;
     cursor: pointer;
-  }
+}
 
-  .dot.active {
+.dot.active {
     background-color: #333;
+}
+
+.contact-section {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
   }
+  
+.contact-info p {
+    font-size: 1rem;
+    margin: 0.5em 0;
+}
+  
+.contact-info a {
+    color: #007BFF;
+    text-decoration: none;
+}
+  
+.contact-info a:hover {
+    text-decoration: underline;
+}
+  
+.map-container {
+    margin-top: 1em;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+  
+
 
 footer {
     text-align: center;
